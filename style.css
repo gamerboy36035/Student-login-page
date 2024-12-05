@@ -1,0 +1,61 @@
+/* Admin Form Styling */
+.admin-form {
+    margin-bottom: 2rem;
+}
+
+.admin-notices li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.5rem;
+    background: #f9f9f9;
+    padding: 0.8rem;
+    border-left: 4px solid #007BFF;
+    border-radius: 4px;
+}
+
+.admin-notices button.delete-btn {
+    background-color: #FF4C4C;
+    color: #fff;
+    border: none;
+    padding: 0.4rem 0.8rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.9rem;
+}
+
+.admin-notices button.delete-btn:hover {
+    background-color: #cc0000;
+}
+
+/* Manage Comments */
+.manage-comments .comment-item {
+    background: #fff;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.manage-comments .reply-box {
+    width: 100%;
+    height: 80px;
+    margin: 0.8rem 0;
+    padding: 0.8rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.manage-comments .reply-btn {
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    padding: 0.6rem 1rem;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.manage-comments .reply-btn:hover {
+    background-color: #218838;
+}

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <!-- Header -->
+        <header>
+            <h1>Admin Dashboard</h1>
+            <p>Manage notices and student comments efficiently.</p>
+        </header>
+
+        <!-- Main Content -->
+        <main>
+            <!-- Post Notice Section -->
+            <section class="post-notice">
+                <h2>Post a New Notice</h2>
+                <form action="#" method="post" class="admin-form">
+                    <textarea name="notice" id="notice" placeholder="Write your notice here..." required></textarea>
+                    <button type="submit">Post Notice</button>
+                </form>
+                <p><strong>Existing Notices:</strong></p>
+                <ul class="admin-notices">
+                    <li>📢 Midterm exams will start on December 15th. <button class="delete-btn">Delete</button></li>
+                    <li>📢 Annual sports meet is scheduled for January 10th. <button class="delete-btn">Delete</button></li>
+                </ul>
+            </section>
+
+            <!-- Manage Comments Section -->
+            <section class="manage-comments">
+                <h2>Manage Comments</h2>
+                <div class="comment-item">
+                    <p><strong>Student 1:</strong> This is a sample comment.</p>
+                    <textarea class="reply-box" placeholder="Write a reply..."></textarea>
+                    <button type="submit" class="reply-btn">Reply</button>
+                </div>
+                <div class="comment-item">
+                    <p><strong>Student 2:</strong> Another sample comment.</p>
+                    <textarea class="reply-box" placeholder="Write a reply..."></textarea>
+                    <button type="submit" class="reply-btn">Reply</button>
+                </div>
+            </section>
+        </main>
+    </div>
+</body>
+</html>
