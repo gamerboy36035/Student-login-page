@@ -1,61 +1,94 @@
-/* Admin Form Styling */
-.admin-form {
-    margin-bottom: 2rem;
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
 }
 
-.admin-notices li {
+body {
+    background-color: #f3f4f6;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-    margin-bottom: 0.5rem;
-    background: #f9f9f9;
-    padding: 0.8rem;
-    border-left: 4px solid #007BFF;
-    border-radius: 4px;
+    height: 100vh;
 }
 
-.admin-notices button.delete-btn {
-    background-color: #FF4C4C;
-    color: #fff;
-    border: none;
-    padding: 0.4rem 0.8rem;
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: 0.9rem;
-}
-
-.admin-notices button.delete-btn:hover {
-    background-color: #cc0000;
-}
-
-/* Manage Comments */
-.manage-comments .comment-item {
+/* Auth Container */
+.auth-container {
     background: #fff;
-    padding: 1rem;
-    margin-bottom: 1rem;
+    padding: 2rem;
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
 }
 
-.manage-comments .reply-box {
+/* Toggle Buttons */
+.toggle-container {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 1.5rem;
+}
+
+.toggle-btn {
+    background: none;
+    border: none;
+    font-size: 1.2rem;
+    cursor: pointer;
+    padding: 0.5rem 1rem;
+    transition: all 0.3s ease;
+    border-bottom: 2px solid transparent;
+}
+
+.toggle-btn.active {
+    font-weight: bold;
+    color: #007BFF;
+    border-bottom: 2px solid #007BFF;
+}
+
+.form-container {
+    display: none;
+}
+
+.form-container.active {
+    display: block;
+}
+
+/* Form Group */
+.form-group {
+    margin-bottom: 1rem;
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+    color: #555;
+}
+
+.form-group input {
     width: 100%;
-    height: 80px;
-    margin: 0.8rem 0;
     padding: 0.8rem;
     border: 1px solid #ddd;
     border-radius: 4px;
+    font-size: 1rem;
 }
 
-.manage-comments .reply-btn {
-    background-color: #28a745;
+/* Buttons */
+.auth-btn {
+    background-color: #007BFF;
     color: #fff;
     border: none;
-    padding: 0.6rem 1rem;
+    padding: 0.8rem 1rem;
     border-radius: 4px;
     font-size: 1rem;
     cursor: pointer;
+    width: 100%;
 }
 
-.manage-comments .reply-btn:hover {
-    background-color: #218838;
+.auth-btn:hover {
+    background-color: #0056b3;
 }

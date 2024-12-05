@@ -3,48 +3,78 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Admin Dashboard</title>
+    <title>Login and Sign-Up Page</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="dashboard-container">
-        <!-- Header -->
-        <header>
-            <h1>Admin Dashboard</h1>
-            <p>Manage notices and student comments efficiently.</p>
-        </header>
+    <div class="auth-container">
+        <!-- Toggle Buttons -->
+        <div class="toggle-container">
+            <button id="login-toggle" class="toggle-btn active">Login</button>
+            <button id="signup-toggle" class="toggle-btn">Sign Up</button>
+        </div>
 
-        <!-- Main Content -->
-        <main>
-            <!-- Post Notice Section -->
-            <section class="post-notice">
-                <h2>Post a New Notice</h2>
-                <form action="#" method="post" class="admin-form">
-                    <textarea name="notice" id="notice" placeholder="Write your notice here..." required></textarea>
-                    <button type="submit">Post Notice</button>
-                </form>
-                <p><strong>Existing Notices:</strong></p>
-                <ul class="admin-notices">
-                    <li>📢 Midterm exams will start on December 15th. <button class="delete-btn">Delete</button></li>
-                    <li>📢 Annual sports meet is scheduled for January 10th. <button class="delete-btn">Delete</button></li>
-                </ul>
-            </section>
+        <!-- Login Form -->
+        <div id="login-form" class="form-container active">
+            <h1>Login</h1>
+            <form action="#" method="post">
+                <div class="form-group">
+                    <label for="login-email">Email</label>
+                    <input type="email" id="login-email" name="email" placeholder="Enter your email" required>
+                </div>
+                <div class="form-group">
+                    <label for="login-password">Password</label>
+                    <input type="password" id="login-password" name="password" placeholder="Enter your password" required>
+                </div>
+                <button type="submit" class="auth-btn">Login</button>
+            </form>
+        </div>
 
-            <!-- Manage Comments Section -->
-            <section class="manage-comments">
-                <h2>Manage Comments</h2>
-                <div class="comment-item">
-                    <p><strong>Student 1:</strong> This is a sample comment.</p>
-                    <textarea class="reply-box" placeholder="Write a reply..."></textarea>
-                    <button type="submit" class="reply-btn">Reply</button>
+        <!-- Sign-Up Form -->
+        <div id="signup-form" class="form-container">
+            <h1>Sign Up</h1>
+            <form action="#" method="post">
+                <div class="form-group">
+                    <label for="signup-name">Full Name</label>
+                    <input type="text" id="signup-name" name="name" placeholder="Enter your full name" required>
                 </div>
-                <div class="comment-item">
-                    <p><strong>Student 2:</strong> Another sample comment.</p>
-                    <textarea class="reply-box" placeholder="Write a reply..."></textarea>
-                    <button type="submit" class="reply-btn">Reply</button>
+                <div class="form-group">
+                    <label for="signup-email">Email</label>
+                    <input type="email" id="signup-email" name="email" placeholder="Enter your email" required>
                 </div>
-            </section>
-        </main>
+                <div class="form-group">
+                    <label for="signup-password">Password</label>
+                    <input type="password" id="signup-password" name="password" placeholder="Create a password" required>
+                </div>
+                <div class="form-group">
+                    <label for="signup-confirm-password">Confirm Password</label>
+                    <input type="password" id="signup-confirm-password" name="confirm-password" placeholder="Confirm your password" required>
+                </div>
+                <button type="submit" class="auth-btn">Sign Up</button>
+            </form>
+        </div>
     </div>
+
+    <script>
+        // JavaScript to toggle between Login and Sign-Up forms
+        const loginToggle = document.getElementById("login-toggle");
+        const signupToggle = document.getElementById("signup-toggle");
+        const loginForm = document.getElementById("login-form");
+        const signupForm = document.getElementById("signup-form");
+
+        loginToggle.addEventListener("click", () => {
+            loginForm.classList.add("active");
+            signupForm.classList.remove("active");
+            loginToggle.classList.add("active");
+            signupToggle.classList.remove("active");
+        });
+
+        signupToggle.addEventListener("click", () => {
+            signupForm.classList.add("active");
+            loginForm.classList.remove("active");
+            signupToggle.classList.add("active");
+            loginToggle.classList.remove("active");
+        });
+    </script>
 </body>
 </html>
